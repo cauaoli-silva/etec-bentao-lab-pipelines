@@ -1,4 +1,4 @@
-# EXERCÍCIO 2 — Passando valores entre steps e entre jobs
+v# EXERCÍCIO 2 — Passando valores entre steps e entre jobs
 # Objetivo: gerar a versão (sha-xxxxxxx) em um step, reaproveitar em outro step
 # e em OUTRO JOB. Isso é o que toda pipeline de deploy faz.
 name: 02 - outputs
@@ -19,7 +19,7 @@ jobs:
       - name: Calcular versão
         id: ver
         run: |
-          
+          VERSAO="1.9.11"
           echo "versao=$VERSAO" >> "$GITHUB_OUTPUT"     # output do step
           echo "APP_VERSION=$VERSAO" >> "$GITHUB_ENV"   # variável para os próximos steps
 
